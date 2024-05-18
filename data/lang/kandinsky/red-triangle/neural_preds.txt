@@ -1,0 +1,4 @@
+in:2:object,image
+rho:3:object,object,rho
+color:2:object,color
+shape:2:object,shape

@@ -1,0 +1,4 @@
+object:O1,O2,O3,O4
+color:red,yellow,blue
+shape:square,circle,triangle
+image:img

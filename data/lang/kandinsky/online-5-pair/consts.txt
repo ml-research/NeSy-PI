@@ -1,0 +1,5 @@
+object:obj0,obj1,obj2,obj3,obj4
+image:img
+group_shape:line,random
+color:red,yellow,blue
+shape:square,circle,triangle

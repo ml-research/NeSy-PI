@@ -1,0 +1,2 @@
+inv_pred0(O1,O2):-area(O1,O2,a0),in(O1,X),in(O2,X).
+inv_pred0(O1,O2):-area(O1,O2,a1),in(O1,X),in(O2,X).

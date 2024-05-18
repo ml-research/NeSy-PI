@@ -1,0 +1,3 @@
+object:obj0,obj1,obj2,obj3
+image:img
+rho:num_rho_25

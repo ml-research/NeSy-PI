@@ -1,0 +1,4 @@
+object:obj0,obj1,obj2,obj3,obj4
+image:img
+phi:num_phi_12
+rho:num_rho_8

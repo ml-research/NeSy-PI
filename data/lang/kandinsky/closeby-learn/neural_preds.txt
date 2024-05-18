@@ -1,0 +1,2 @@
+in:2:object,image
+rho:3:object,object,rho

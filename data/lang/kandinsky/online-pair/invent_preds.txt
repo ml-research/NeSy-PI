@@ -1,0 +1,4 @@
+inv_pred:2:object,object
+inv_pred:3:object,object,object
+inv_pred:4:object,object,object,object
+inv_pred:5:object,object,object,object,object

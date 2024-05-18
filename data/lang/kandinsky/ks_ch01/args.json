@@ -1,0 +1,23 @@
+{
+  "n_obj": 2,
+  "batch-size-train": 20,
+  "e": 6,
+  "dataset": "ks_ch01",
+  "dataset-type": "kandinsky",
+  "top_data": 100,
+  "t-beam": 5,
+  "n-beam": 5,
+  "cim-step": 5,
+  "epochs": 100,
+  "sn_th": 0.99,
+  "nc_th": 0.9,
+  "uc_th": 0.8,
+  "sc_th": 0.9,
+  "uc_top": 10,
+  "uc_good_top": 10,
+  "sc_good_top": 20,
+  "nc_good_top": 10,
+  "pi_top": 5,
+  "with_bk": false,
+  "plot_four_zone": false
+}

@@ -1,0 +1,1 @@
+kp(X):-group_shape(O1,O2,O3,line),group_shape(O2,O3,O4,line),phi(O1,O5,phi7).

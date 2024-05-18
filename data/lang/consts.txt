@@ -1,0 +1,6 @@
+object:obj0,obj1,obj2,obj3,obj4
+image:img
+color:red,yellow,blue
+shape:square,circle,triangle
+phi:num_phi_8
+rho:num_rho_8

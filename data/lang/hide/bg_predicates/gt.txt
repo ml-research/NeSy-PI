@@ -1,0 +1,2 @@
+bk_inv1(O1,O2):-in(O1,X),in(O2,X),color(O1,blue),color(O2,green),shape(O1,sphere),shape(O2,sphere),phi(O1,O2,phi3).
+bk_inv1(O1,O2):-in(O1,X),in(O2,X),color(O1,blue),color(O2,green),shape(O1,sphere),shape(O2,cube),phi(O2,O1,phi3).

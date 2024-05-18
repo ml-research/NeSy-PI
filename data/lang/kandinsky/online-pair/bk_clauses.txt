@@ -1,0 +1,12 @@
+same_shape_pair(X,Y):-shape(X,Z),shape(Y,Z).
+same_color_pair(X,Y):-color(X,Z),color(Y,Z).
+diff_shape_pair(X,Y):-shape(X,Z),shape(Y,W),diff_shape(Z,W).
+diff_color_pair(X,Y):-color(X,Z),color(Y,W),diff_color(Z,W).
+at_area_0(X,Y):-area(X,Y,Z),area_0(Z).
+at_area_1(X,Y):-area(X,Y,Z),area_1(Z).
+at_area_2(X,Y):-area(X,Y,Z),area_2(Z).
+at_area_3(X,Y):-area(X,Y,Z),area_3(Z).
+at_area_4(X,Y):-area(X,Y,Z),area_4(Z).
+at_area_5(X,Y):-area(X,Y,Z),area_5(Z).
+at_area_6(X,Y):-area(X,Y,Z),area_6(Z).
+at_area_7(X,Y):-area(X,Y,Z),area_7(Z).

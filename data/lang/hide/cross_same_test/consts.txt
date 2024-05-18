@@ -1,0 +1,5 @@
+object:num_obj_5
+image:img
+shape:sphere,cube
+color:pink,green,blue
+phi:num_phi_4
