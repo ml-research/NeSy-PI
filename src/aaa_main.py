@@ -104,8 +104,6 @@ def main():
     args = args_utils.get_args(config.data_path)
     group_round_time = []
     train_round_time = []
-    train_end = 0
-    eval_end = 0
 
     # get images names
     file_utils.get_image_names(args)

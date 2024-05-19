@@ -5,7 +5,7 @@ import torch.nn.functional as F
 import aitk.valuation
 import aitk.valuation_yolo
 
-from aitk.utils.fol import Atom
+from aitk.utils.fol.logic import Atom
 from aitk.utils.fol import bk
 
 
