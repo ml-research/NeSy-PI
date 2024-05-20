@@ -41,8 +41,5 @@ Please download the dataset and unzip the folder to `NeSy-PI\storage`.
 
 ## Experiments
 
-#### Dataset
-The dataset is saved in the extern folder `storage`. 
-
 #### Run Experiments
-Check [Readme](\src\README.md) file in folder `NeSy-PI\src`.
+Check [Readme](src/README.md) file in folder `NeSy-PI/src`.
