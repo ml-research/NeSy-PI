@@ -229,7 +229,6 @@ def ilp_eval(success, args, lang, clauses, g_data):
 
     if len(clauses) == 0:
         return
-    # target_predicate = [clauses[0].head.pred.name]
     # calculate scores
     VM = ai_interface.get_vm(args, lang)
     FC = ai_interface.get_fc(args, lang, VM, args.group_e)
@@ -255,11 +254,7 @@ def ilp_eval(success, args, lang, clauses, g_data):
             scores_dict[data_type]["score"].append(score_best)
             scores_dict[data_type]["clause"].append(clause_best)
 
-            if data_type == "false" and score_best > 0.9:
-                print("(FP)")
-            elif data_type == "true" and score_best < 0.1:
-                print("(FN)")
-    visual_utils.visualization(args, lang, scores_dict)
+    # visual_utils.visualization(args, lang, scores_dict)
 
     log_utils.add_lines("===================== top clause score ================================", args.log_file)
     positive_res = torch.tensor(scores_dict['true']['score'])

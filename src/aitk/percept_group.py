@@ -748,12 +748,12 @@ def gen_single_obj_groups(args, valid_obj_all, visual):
 
 def detect_obj_groups(args, percept_dict_single, data_type):
     log_utils.add_lines(f"- grouping {data_type} objects ...", args.log_file)
-    save_path = config.buffer_path / args.dataset_type / args.dataset / "buffer_groups"
+    save_path = config.buffer_path  / args.dataset
     save_file = save_path / f"{args.dataset}_group_res_{data_type}.pth.tar"
     if save_file.is_file() and args.re_eval_groups:
         os.remove(str(save_file))
 
-    args.analysis_output_path = args.analysis_path / data_type
+    # args.analysis_output_path = args.analysis_path / data_type
     is_visual = args.is_visual
     if not os.path.exists(save_path):
         os.mkdir(save_path)

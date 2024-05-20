@@ -91,7 +91,8 @@ obj_tensor_index = {
     'screen_y': 12
 }
 
-buffer_path = root / ".." / "storage"
+buffer_path = root / "storage"
+
 data_path = root / "data"
 if not os.path.exists(buffer_path):
     os.mkdir(buffer_path)

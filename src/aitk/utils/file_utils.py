@@ -24,8 +24,8 @@ def parse_neural_pred(line, pi_type):
     return NeuralPredicate(pred, int(arity), dtypes, pi_type)
 
 
-def get_image_names(args):
-    image_root = config.buffer_path / args.dataset_type / args.dataset
+def load_dataset(args):
+    image_root = config.buffer_path / args.dataset
     image_name_dict = {}
     for data_mode in ['test', 'train', 'val']:
         tar_file = image_root / f"{args.dataset}_pm_res_{data_mode}.pth.tar"
@@ -36,6 +36,5 @@ def get_image_names(args):
         image_name_dict[data_mode] = {}
         image_name_dict[data_mode]["true"] = tensor_dict["pos_names"]
         image_name_dict[data_mode]["false"] = tensor_dict["neg_names"]
-        # if len(image_name_dict[data_mode]["true"]) == 0 or len(image_name_dict[data_mode]["false"]) == 0:
-        #     raise ValueError
+
     args.image_name_dict = image_name_dict

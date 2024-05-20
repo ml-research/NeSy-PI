@@ -15,7 +15,6 @@ import config
 date_now = datetime.datetime.today().date()
 time_now = datetime.datetime.now().strftime("%H_%M_%S")
 
-
 def init(args):
     if "alphabet" in args.dataset_type:
         name = str(Path("A") / f"{args.dataset}")
@@ -29,28 +28,25 @@ def init(args):
                         args.log_file)
     # log_utils.add_lines(f"args: {args}", log_file)
 
-    img_output_path = config.buffer_path / args.dataset_type / args.dataset / "image_output"
-    if not os.path.exists(img_output_path):
-        os.mkdir(img_output_path)
-    args.image_output_path = img_output_path
+    # img_output_path = config.buffer_path / args.dataset / "image_output"
+    # if not os.path.exists(img_output_path):
+    #     os.mkdir(img_output_path)
+    # args.image_output_path = img_output_path
 
-    analysis_path = config.buffer_path / args.dataset_type / args.dataset / "analysis"
-    if not os.path.exists(analysis_path):
-        os.mkdir(analysis_path)
-        os.mkdir(analysis_path / "train_pos")
-        os.mkdir(analysis_path / "train_neg")
-        os.mkdir(analysis_path / "test_pos")
-        os.mkdir(analysis_path / "test_neg")
-        os.mkdir(analysis_path / "val_pos")
-        os.mkdir(analysis_path / "val_neg")
+    # analysis_path = config.buffer_path / args.dataset_type / args.dataset / "analysis"
+    # if not os.path.exists(analysis_path):
+    #     os.mkdir(analysis_path)
+    #     os.mkdir(analysis_path / "train_pos")
+    #     os.mkdir(analysis_path / "train_neg")
+    #     os.mkdir(analysis_path / "test_pos")
+    #     os.mkdir(analysis_path / "test_neg")
+    #     os.mkdir(analysis_path / "val_pos")
+    #     os.mkdir(analysis_path / "val_neg")
 
-    args.analysis_path = analysis_path
+    # args.analysis_path = analysis_path
 
     if args.no_cuda:
         args.device = torch.device('cpu')
-    elif len(str(args.device_id).split(',')) > 1:
-        # multi gpu
-        args.device = torch.device('cuda')
     else:
         args.device = torch.device(int(args.device_id))
 
@@ -61,9 +57,8 @@ def init(args):
     # Start the RTPT tracking
     rtpt.start()
     torch.set_printoptions(precision=4)
-    torch.autograd.set_detect_anomaly(True)
 
-    file_path = config.buffer_path / args.dataset_type / f"{args.dataset}"
+    file_path = config.buffer_path / args.dataset
     pm_prediction_dict = percept.get_perception_predictions(args, file_path)
     pm_prediction_dict = percept.remove_zero_tensors(pm_prediction_dict, config.obj_tensor_index['prob'])
 
@@ -105,9 +100,9 @@ def main():
     group_round_time = []
     train_round_time = []
 
-    # get images names
-    file_utils.get_image_names(args)
-    exp_output_path = config.buffer_path / args.dataset_type / args.dataset / "logs"
+    # load dataset
+    file_utils.load_dataset(args)
+    exp_output_path = config.buffer_path / args.dataset / "logs"
     if not os.path.exists(exp_output_path):
         os.mkdir(exp_output_path)
     log_file = log_utils.create_log_file(exp_output_path)

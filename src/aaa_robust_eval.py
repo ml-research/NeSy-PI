@@ -129,7 +129,7 @@ def main():
     eval_end = 0
 
     # get images names
-    file_utils.get_image_names(args)
+    file_utils.load_dataset(args)
     exp_output_path = config.buffer_path / args.dataset_type / args.dataset / "logs"
     if not os.path.exists(exp_output_path):
         os.mkdir(exp_output_path)

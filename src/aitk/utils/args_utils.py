@@ -169,7 +169,7 @@ def get_args(data_path):
                         help="The number of directions for direction predicates.")
     args = parser.parse_args()
 
-    args_file = data_path / "lang" / args.dataset_type / str(str(args.dataset) + ".json")
+    args_file = data_path / "lang" / "exp_args" / f"{str(args.dataset)}.json"
     load_args_from_file(str(args_file), args)
 
     return args
